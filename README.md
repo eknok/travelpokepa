@@ -16,4 +16,6 @@
 - (github)[https://github.com/eknok/Pokemon-DB]
 
 
-## その他
+## WebPages
+- GitHub https://github.com/eknok/travelpokepa/  
+- Heroku https://travelpa.herokuapp.com/
