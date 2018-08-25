@@ -1,24 +1,19 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Poketravelpa
+ポケモン旅パーティ用  
 
-Things you may want to cover:
+## Version
+- Rails 5.1.6  
+- Ruby 2.5.1
 
-* Ruby version
+## API
 
-* System dependencies
+- (poke_data)[https://github.com/kotofurumiya/pokemon_data]
+-
 
-* Configuration
+## Refarences
+- Qiita (素晴らしきポケモンエコシステム)[https://qiita.com/seya/items/47dc0ebae55674d8902f]
+- (github)[https://github.com/eknok/Pokemon-DB]
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## その他
