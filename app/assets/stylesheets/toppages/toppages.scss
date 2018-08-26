@@ -8,6 +8,14 @@ body {
 }
 
 
+a {
+  text-decoration: none;
+  transition: all .1s;
+  &:hover {
+    color: red;
+  }
+}
+
 .container {
   padding-top: 20px;
 }
