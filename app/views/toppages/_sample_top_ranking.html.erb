@@ -1,0 +1,15 @@
+<!-- 以下each分サンプル -->
+<ol>
+  <% 3.times do %>
+    <li>
+      <%= link_to root_path do %>
+      <%= image_tag "/pokemon_images/spr/#{random_spr}MS.png" %>
+      <%= image_tag "/pokemon_images/spr/#{random_spr}MS.png" %>
+      <%= image_tag "/pokemon_images/spr/#{random_spr}MS.png" %>
+      <%= image_tag "/pokemon_images/spr/#{random_spr}MS.png" %>
+      <%= image_tag "/pokemon_images/spr/#{random_spr}MS.png" %>
+      <%= image_tag "/pokemon_images/spr/#{random_spr}MS.png" %>
+      <% end %>
+    </li>
+  <% end %>
+</ol>

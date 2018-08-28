@@ -1,0 +1,19 @@
+<div class="footer">
+  <p class="footer-p">created at knok</p>
+  <div class="col-lg-4">
+    <a href="https://github.com/eknok"><i class="fab fa-github fa-3x"></i></a>
+    <a href="#"><i class="fab fa-facebook-square fa-3x"></i></a>
+    <a href="https://twitter.com/eeknok"><i class="fab fa-twitter fa-3x"></i></a>
+  </div>
+  <br>
+  <div class="col-lg-6">
+    <div class="form-footer">
+      <%= form_tag('/send_user', method: 'post', class: 'form-group') do %>
+        <%= email_field(:email, '', class: 'form-control', placeholder: 'Your Email') %>
+        <small class="text-muted">あなたのメールは他の誰とも共有しません。</small>
+        <%= text_area(:content, '', class: 'form-control', rows: '10', cols: '60', placeholder: 'ご要望・質問等どうぞ') %><br>
+        <%= submit_tag("送信する", class: 'btn btn-primary') %>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+
+.footer {
+  background-color: #232f3e;
+  padding: 50px 150px;
+}
+
+a {
+  padding: 10px;
+}
+
+.footer-p {
+  color: white;
+}
+
+i.fa-github {
+  color: white;
+  transition: all, 0.2s;
+}
+
+i.fa-github:hover {
+  color: gray;
+}
+
+i.fa-facebook-square {
+  color: white;
+  transition: all, 0.2s;
+}
+
+i.fa-facebook-square:hover {
+  color: #3b5998;
+}
+
+i.fa-twitter {
+  color: white;
+  transition: all, 0.2s;
+}
+
+i.fa-twitter:hover {
+  color: #1DA1F2;
+}
