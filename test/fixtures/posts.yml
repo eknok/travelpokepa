@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  party1: MyString
+  party2: MyString
+  parth3: MyString
+  party4: MyString
+  parth5: MyString
+  party6: MyString
+  comment: MyString
+  favorite: MyString
+  game: MyString
+  user: 
+
+two:
+  title: MyString
+  party1: MyString
+  party2: MyString
+  parth3: MyString
+  party4: MyString
+  parth5: MyString
+  party6: MyString
+  comment: MyString
+  favorite: MyString
+  game: MyString
+  user: 
