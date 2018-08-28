@@ -1,0 +1,15 @@
+ja:
+  activerecord:
+    attributes:
+      post:
+        title:   'パーティ名'
+        comment: 'コメント'
+  posts:
+    games:
+      red_green:     '赤・緑'
+      gold_silver:   '金・銀'
+      ruby_sapphire: 'ルビー・サファイヤ'
+      diamond_pearl: 'ダイヤモンド・パール'
+      black_white:   'ブラック・ホワイト'
+      x_y:           'X・Y'
+      sun_moon:      'サン・ムーン'

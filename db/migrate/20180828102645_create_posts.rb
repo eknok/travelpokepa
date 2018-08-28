@@ -8,9 +8,9 @@ class CreatePosts < ActiveRecord::Migration[5.1]
       t.string :party4
       t.string :party5
       t.string :party6
-      t.string :comment
+      t.text :comment
       t.string :favorite
-      t.string :game
+      t.integer :game, default: 0, null: false, limit: 1
       t.references :user, foreign_key: true
 
       t.timestamps

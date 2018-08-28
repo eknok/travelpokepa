@@ -8,23 +8,24 @@
 
   <div class="collapse navbar-collapse" id="Navber">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">ホーム <span class="sr-only">(現位置)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">マイページ</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          メニュー
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">ランキング</a>
-          <a class="dropdown-item" href="#">世代別</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">ログアウト</a>
-        </div>
-      </li>
+      <% if user_signed_in? %>
+        <li class="nav-item"><%= link_to 'マイページ', user_path(current_user), class: 'nav-link' %></li>
+        <li class="nav-item"><%= link_to 'パーティを投稿', new_post_path, class: 'nav-link' %></li>
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            メニュー
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">ランキング</a>
+            <a class="dropdown-item" href="#">世代別</a>
+            <div class="dropdown-divider"></div>
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'dropdown-item' %>
+          </div>
+        </li>
+      <% else %>
+        <li class="nav-item"><%= link_to '新規登録', new_user_registration_path, class: 'nav-link' %></li>
+        <li class="nav-item"><%= link_to 'ログイン', new_user_session_path , class: 'nav-link' %></li>
+      <% end %>
     </ul>
   </div><!-- /.navbar-collapse -->
 </nav>

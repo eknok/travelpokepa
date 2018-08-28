@@ -23,9 +23,9 @@ ActiveRecord::Schema.define(version: 20180828102645) do
     t.string "party4"
     t.string "party5"
     t.string "party6"
-    t.string "comment"
+    t.text "comment"
     t.string "favorite"
-    t.string "game"
+    t.integer "game", limit: 2, default: 0, null: false
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

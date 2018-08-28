@@ -1,0 +1,55 @@
+<%= render 'form_select_js' %>
+<%= form_for(@post) do |f| %>
+  <%= render 'layouts/error_messages', object: f.object %>
+  <%= f.label :title %>
+  <%= f.text_field :title, class: 'form-control' %>
+
+  <%= f.label :game %>
+  <%= f.select :game, Post.games.map{ |k, _| [t("posts.games.#{k}"), k] },
+                {}, { class: 'form-control bootstrap-gender' } %>
+  <div class="patry_select">
+    <span id="image1"></span>
+    <span id="image2"></span>
+    <span id="image3"></span>
+    <span id="image4"></span>
+    <span id="image5"></span>
+    <span id="image6"></span>
+  </div>
+  <%= f.label :party1 %></br>
+  <%= f.select :party1, @poke_name.map{ |i,k| [i, k] },
+                {}, { id: 'selectbox1', class: 'form-control', onchange: "myfunc1()" } %>
+  <div id="image1"></div>
+
+  <%= f.label :party2 %></br>
+  <%= f.select :party2, @poke_name.map{ |i,k| [i, k] },
+                {}, { id: 'selectbox2', class: 'form-control', onchange: "myfunc2()" } %>
+  <div id="image2"></div>
+
+  <%= f.label :party3 %></br>
+  <%= f.select :party3, @poke_name.map{ |i,k| [i, k] },
+                {}, { id: 'selectbox3', class: 'form-control', onchange: "myfunc3()" } %>
+  <div id="image3"></div>
+
+  <%= f.label :party4 %></br>
+  <%= f.select :party4, @poke_name.map{ |i,k| [i, k] },
+                {}, { id: 'selectbox4', class: 'form-control', onchange: "myfunc4()" } %>
+  <div id="image4"></div>
+
+  <%= f.label :party5 %></br>
+  <%= f.select :party5, @poke_name.map{ |i,k| [i, k] },
+                {}, { id: 'selectbox5', class: 'form-control', onchange: "myfunc5()" } %>
+  <div id="image5"></div>
+
+  <%= f.label :party6 %></br>
+  <%= f.select :party6, @poke_name.map{ |i,k| [i, k] },
+                {}, { id: 'selectbox6', class: 'form-control', onchange: "myfunc6()" } %>
+  <div id="image6"></div>
+
+  <%= image_tag "/pokemon_images/spr/#{random_spr}MS.png" %>
+
+  <%= f.label :comment %>
+  <%= f.text_area :comment, size: "20x10", class: 'form-control' %><br>
+
+  <%= f.submit "投稿", class: 'btn btn-primary' %>
+
+<% end %>
