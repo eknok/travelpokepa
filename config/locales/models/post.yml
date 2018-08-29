@@ -13,3 +13,11 @@ ja:
       black_white:   'ブラック・ホワイト'
       x_y:           'X・Y'
       sun_moon:      'サン・ムーン'
+      en:
+        red_green:     'Red・Green'
+        gold_silver:   'Gold・Silver'
+        ruby_sapphire: 'Ruby・Sapphire'
+        diamond_pearl: 'Diamond・Pearl'
+        black_white:   'Black・White'
+        x_y:           'X・Y'
+        sun_moon:      'Sun・Moon'

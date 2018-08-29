@@ -1,0 +1,8 @@
+<% @posts.each do |post| %>
+  <% if post.game == 'red_green' %>
+  <div class="top-rankink">
+    <font size=3 color=#333><%= t("posts.games.en.#{post.game}") %></font>
+    <h5><%= t("posts.games.#{post.game}") %></h5>
+    <%= render 'sample_top_ranking' %>
+  </div>
+  <% end %>
