@@ -8,48 +8,15 @@
       <%= image_tag "/pokemon_images/spr/#{random_spr}MS.png" %>
       This is memory pokemon games</p>
 
-    <div class="redgreen-top">
-      <font size=3 color=#333>Red・Green</font>
-      <h5>赤・緑</h5>
-      <%= render 'sample_top_ranking' %>　 <!-- 以下サンプルパーティ文 -->
+    <div class="top-rankings">
+      <%= render 'top_ranking', posts: @red_green %>
+      <%= render 'top_ranking', posts: @gold_silver %>
+      <%= render 'top_ranking', posts: @ruby_sapphire %>
+      <%= render 'top_ranking', posts: @diamond_pearl %>
+      <%= render 'top_ranking', posts: @black_white %>
+      <%= render 'top_ranking', posts: @x_y %>
+      <%= render 'top_ranking', posts: @sun_moon %>
     </div>
-
-    <div class="goldsilver-top">
-      <font size=3 color=#333>Gold・Silver</font>
-      <h5>金・銀</h5>
-      <%= render 'sample_top_ranking' %>　 <!-- 以下サンプルパーティ文 -->
-    </div>
-
-    <div class="rubysapphire-top">
-      <font size=3 color=#333>Ruby・Sapphire</font>
-      <h5>ルビー・サファイヤ</h5>
-      <%= render 'sample_top_ranking' %>　 <!-- 以下サンプルパーティ文 -->
-    </div>
-
-    <div class="diamondpearl-top">
-      <font size=3 color=#333>Diamond・Pearl</font>
-      <h5>ダイヤモンド・パール</h5>
-      <%= render 'sample_top_ranking' %>　 <!-- 以下サンプルパーティ文 -->
-    </div>
-
-    <div class="blackwhite-top">
-      <font size=3 color=#333>Black・White</font>
-      <h5>ブラック・ホワイト</h5>
-      <%= render 'sample_top_ranking' %>　 <!-- 以下サンプルパーティ文 -->
-    </div>
-
-    <div class="xy-top">
-      <font size=3 color=#333>X・Y</font>
-      <h5>X・Y</h5>
-      <%= render 'sample_top_ranking' %>　 <!-- 以下サンプルパーティ文 -->
-    </div>
-
-    <div class="sunmoon-top">
-      <font size=3 color=#333>Sun・Moon</font>
-      <h5>サン・ムーン</h5>
-      <%= render 'sample_top_ranking' %>　 <!-- 以下サンプルパーティ文 -->
-    </div>
-
 
   </div>
 
