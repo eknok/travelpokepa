@@ -1,18 +1,18 @@
-  <div class="top-ranking">
-    <font size=3 color=#333><%= t("posts.games.en.#{posts.first.game}") %></font>
-    <h5><%= t("posts.games.#{posts.first.game}") %></h5>
-    <ol>
-      <% posts.each do |post| %>
-        <li>
-          <%= link_to post_path(post) do %>
-          <%= image_tag "/pokemon_images/spr/#{select_spr(post.party1)}MS.png" %>
-          <%= image_tag "/pokemon_images/spr/#{select_spr(post.party2)}MS.png" %>
-          <%= image_tag "/pokemon_images/spr/#{select_spr(post.party3)}MS.png" %>
-          <%= image_tag "/pokemon_images/spr/#{select_spr(post.party4)}MS.png" %>
-          <%= image_tag "/pokemon_images/spr/#{select_spr(post.party5)}MS.png" %>
-          <%= image_tag "/pokemon_images/spr/#{select_spr(post.party6)}MS.png" %>
-          <% end %>
-        </li>
-      <% end %>
-    </ol>
-  </div>
+<div class="top-ranking col-md-5">
+  <font size=3 color=#333><%= t("posts.games.en.#{posts.first.game}") %></font>
+  <h5><%= t("posts.games.#{posts.first.game}") %></h5>
+  <ol>
+    <% posts.each do |post| %>
+      <li>
+        <%= link_to post_path(post) do %>
+        <%= image_tag "/pokemon_images/spr/#{select_spr(post.party1)}MS.png" %>
+        <%= image_tag "/pokemon_images/spr/#{select_spr(post.party2)}MS.png" %>
+        <%= image_tag "/pokemon_images/spr/#{select_spr(post.party3)}MS.png" %>
+        <%= image_tag "/pokemon_images/spr/#{select_spr(post.party4)}MS.png" %>
+        <%= image_tag "/pokemon_images/spr/#{select_spr(post.party5)}MS.png" %>
+        <%= image_tag "/pokemon_images/spr/#{select_spr(post.party6)}MS.png" %>
+        <% end %>
+      </li>
+    <% end %>
+  </ol>
+</div>

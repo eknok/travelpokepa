@@ -19,3 +19,16 @@
 ## WebPages
 - GitHub https://github.com/eknok/travelpokepa/  
 - Heroku https://travelpa.herokuapp.com/
+
+
+## 自分用メモ
+- ポケモン問題
+  - サンムーンの画像どうする？
+  - 日本語入りポケモンjsonファイルに英語名ポケモン名突っ込むか？
+  - メガポケモンどうする？
+  -
+
+## 参考記事めも
+- Formめも
+   - 複数checkboxで配列で入れ込み http://www.sejuku.net/blog/27132
+   - 

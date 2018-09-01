@@ -41,7 +41,7 @@
   <div id="image5"></div>
 
   <%= f.label :party6 %></br>
-  <%= f.select :party6, @poke_name.map{ |i,k| [i, k] },
+  <%= f.select :party6, @poke_name.map{ |i,k| ["", k] },
                 {}, { id: 'selectbox6', class: 'form-control', onchange: "myfunc6()" } %>
   <div id="image6"></div>
 
