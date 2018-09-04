@@ -9,4 +9,8 @@ module PostsHelper
      @rand_spr = value.to_s
    end
   end
+
+  def array_party(party)
+    party.gsub(" ", "").split(",")
+  end
 end

@@ -7,8 +7,8 @@ class Post < ApplicationRecord
   validate :check_game
 
   def before_save_party
-    errors.add(:party, "2対以上は入力してください") if self.party.nil?
-    self.img_no.gsub!(/[\[\]\"]/, "") unless self.party.nil?
+    # errors.add(:party, "2対以上は入力してください") if self.party.nil?
+    self.party.gsub!(/[\[\]\"]/, "") unless self.party.nil?
   end
 
   # 世代で判断

@@ -8,12 +8,9 @@
           <h5 class="card-title"><%= link_to post.title, post_path(post) %></h5>
           <h6 class="card-subtitle mb-2 text-muted"><%= t("posts.games.#{post.game}") %></h6>
           <p class="card-text">
-            <%= image_tag "/pokemon_images/spr/#{select_spr(post.party1)}MS.png" %>
-            <%= image_tag "/pokemon_images/spr/#{select_spr(post.party2)}MS.png" %>
-            <%= image_tag "/pokemon_images/spr/#{select_spr(post.party3)}MS.png" %>
-            <%= image_tag "/pokemon_images/spr/#{select_spr(post.party4)}MS.png" %>
-            <%= image_tag "/pokemon_images/spr/#{select_spr(post.party5)}MS.png" %>
-            <%= image_tag "/pokemon_images/spr/#{select_spr(post.party6)}MS.png" %>
+            <% array_party(post.party).each do |img| %>
+              <%= image_tag "/pokemon_images/spr/#{select_spr(img)}MS.png" %>
+            <% end %>
           <p class="card-text"><%= post.comment %></p>
           <a href="#" class="card-link"><%= post.user.email %></a>
           <a href="#" class="card-link">♡</a>
