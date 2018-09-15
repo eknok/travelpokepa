@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+  # before_action :array
+  # before_action :teisgi
+  
 
   def index
     @posts = Post.all
@@ -11,6 +14,7 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    # jsonから取ってこなくてもよくね？
     @poke_json = ActiveSupport::JSON.decode(File.read('pokemon_data.json'))
     @poke_names = []
     @poke_json.each do |result|
@@ -26,6 +30,7 @@ class PostsController < ApplicationController
       flash[:success] = 'パーティを作成しました！'
       redirect_to @post
     else
+      # jsonから取ってこなくてもよくね？
       @poke_json = ActiveSupport::JSON.decode(File.read('pokemon_data.json'))
       @poke_names = []
       @poke_json.each do |result|
@@ -38,6 +43,8 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find(params[:id])
+  ## QUESTION: jsonから取ってこなくてもよくね？
+
     @poke_json = ActiveSupport::JSON.decode(File.read('pokemon_data.json'))
     @poke_names = []
     @poke_json.each do |result|
@@ -67,4 +74,14 @@ class PostsController < ApplicationController
   def params_post
     params.require(:post).permit(:title, :game, :comment, party:[])
   end
+
+  # befoe_action定義
+  def teigi
+    @post = Post.find(params[:id])
+  end
+
+  def array_party
+    @party = @post.party.gsub(" ", "").split(",")
+  end
+
 end
