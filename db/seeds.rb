@@ -6,88 +6,16 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# 5.times do |i|
-#   Post.create(title: "金銀titile#{i}",
-#               party1: rand(1..700),
-#               party2: rand(1..700),
-#               party3: rand(1..700),
-#               party4: rand(1..700),
-#               party5: rand(1..700),
-#               party6: rand(1..700),
-#               comment: "金銀comment#{i}commnet#{i}",
-#               favorite: nil,
-#               game: "gold_silver",
-#               user_id: 1
-#             )
-# end
-#
-# 5.times do |i|
-#   Post.create(title: "ルビサファtitile#{i}",
-#               party1: rand(1..700),
-#               party2: rand(1..700),
-#               party3: rand(1..700),
-#               party4: rand(1..700),
-#               party5: rand(1..700),
-#               party6: rand(1..700),
-#               comment: "ルビサファcomment#{i}commnet#{i}",
-#               favorite: nil,
-#               game: "ruby_sapphire",
-#               user_id: 1
-#             )
-# end
-# 5.times do |i|
-#   Post.create(title: "DPtitile#{i}",
-#               party1: rand(1..700),
-#               party2: rand(1..700),
-#               party3: rand(1..700),
-#               party4: rand(1..700),
-#               party5: rand(1..700),
-#               party6: rand(1..700),
-#               comment: "だいぱcomment#{i}commnet#{i}",
-#               favorite: nil,
-#               game: "diamond_pearl",
-#               user_id: 1
-#             )
-# end
-# 5.times do |i|
-#   Post.create(title: "black_whitetitile#{i}",
-#               party1: rand(1..700),
-#               party2: rand(1..700),
-#               party3: rand(1..700),
-#               party4: rand(1..700),
-#               party5: rand(1..700),
-#               party6: rand(1..700),
-#               comment: "black_whitecomment#{i}commnet#{i}",
-#               favorite: nil,
-#               game: "black_white",
-#               user_id: 1
-#             )
-# end
-# 5.times do |i|
-#   Post.create(title: "x_y titile#{i}",
-#               party1: rand(1..700),
-#               party2: rand(1..700),
-#               party3: rand(1..700),
-#               party4: rand(1..700),
-#               party5: rand(1..700),
-#               party6: rand(1..700),
-#               comment: "x_y comment#{i}commnet#{i}",
-#               favorite: nil,
-#               game: "x_y",
-#               user_id: 1
-#             )
-# end
-# 5.times do |i|
-#   Post.create(title: "sun_moon titile#{i}",
-#               party1: rand(1..700),
-#               party2: rand(1..700),
-#               party3: rand(1..700),
-#               party4: rand(1..700),
-#               party5: rand(1..700),
-#               party6: rand(1..700),
-#               comment: "sun_moon comment#{i}commnet#{i}",
-#               favorite: nil,
-#               game: "sun_moon",
-#               user_id: 1
-#             )
-# end
+User.create(email: "user01@user.com", password: "123456")
+
+["red_green", "gold_silver", "ruby_sapphire", "diamond_pearl", "black_white", "x_y", "sun_moon"].each do |sedai|
+  5.times do |i|
+    Post.create(title: "#{sedai}titile#{i}",
+                party: "#{rand(1..700)}, #{rand(1..700)}, #{rand(1..700)}, #{rand(1..700)}, #{rand(1..700)}, #{rand(1..700)}",
+                comment: "#{sedai}omment#{i}commnet#{i}",
+                favorite: nil,
+                game: sedai,
+                user_id: 1
+              )
+  end
+end

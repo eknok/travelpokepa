@@ -17,12 +17,7 @@ ActiveRecord::Schema.define(version: 20180828102645) do
 
   create_table "posts", force: :cascade do |t|
     t.string "title"
-    t.string "party1"
-    t.string "party2"
-    t.string "party3"
-    t.string "party4"
-    t.string "party5"
-    t.string "party6"
+    t.string "party"
     t.text "comment"
     t.string "favorite"
     t.integer "game", limit: 2, default: 0, null: false
