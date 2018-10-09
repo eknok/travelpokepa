@@ -64,9 +64,10 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @interview.destroy
+    @post = Post.find(params[:id])
+    @post.destroy
     flash[:info] = '削除しました'
-    redirect_to user_interviews_path
+    redirect_to posts_path
   end
 
   private
